@@ -3,7 +3,7 @@
 }
 
 .App-header {
-  background-color: #F51240;
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@
   color: #61dafb;
 }
 
-.App-top {
+.top {
   background-color: #F51240;
   height: 350px;
 }
@@ -28,13 +28,12 @@
 
 .App-login {
   background-color: white;
-  
+
 }
 
 .a {
   color: #F51240;
   font-size: 15px;
-  
 }
 
 .Button {
@@ -42,7 +41,7 @@
   height: 40px;
   background-color: #F51240;
   border: 2px;
-  border-color: black;  
+  border-color: black;
   text-align: center;
 
 }
