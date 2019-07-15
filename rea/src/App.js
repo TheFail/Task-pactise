@@ -3,11 +3,11 @@ import './App.css';
 
 function App() {
     return (
-        <div className="App">
+        <div className="App" style="font-family: 'Roboto', sans-serif;">
             <header className="App-header">
               <div id="top">
                 <div id="logo"> 
-                 <img src="..\assets\Logo.png"></img>
+                 <img src="..\assets\img\Logo.png"></img>
                 </div>
               </div>
               <div id="login">
