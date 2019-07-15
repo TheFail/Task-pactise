@@ -16,11 +16,22 @@ function App() {
                     <a href="">Forgot your password?</a>
                 <button type="submit" id>Login</button>
                 No have account? Sign up for free.
-                <a href=""><font ></font></a>
+                <a href=""><font id="sign_up">Sign up</font></a>
+              </div>
+              <div id="bottom">
+                <a href="">Support</a> 
+                <div>Version {Version} </div>
+                <a href="">Disclaimer</a>
               </div>
             </header>
         </div>
     );
+}
+
+function Version(){
+  return(
+    
+  );
 }
 
 export default App;

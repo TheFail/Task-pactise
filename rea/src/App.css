@@ -2,12 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
 .App-header {
   background-color: #F51240;
   min-height: 100vh;
@@ -28,8 +22,21 @@
   height: 350px;
 }
 
+.logo {
+  align-content: center;
+}
+
 .App-login {
   background-color: white;
+  
+}
+
+.Button {
+  width: 300px;
+  height: 40px;
+  background-color: #F51240;
+  border: 2px;
+  border-color: black;  
 }
 
 @keyframes App-logo-spin {
