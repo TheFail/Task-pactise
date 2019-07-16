@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../assets/img/Logo.png'
+import Logo from '../assets/img/Logo.png';
 import './App.css';
 import Button from '../Button/Button.js';
 import Input from '../Input/Input.js';
@@ -28,9 +28,9 @@ function App() {
                  <a href=""><font id="sign_up">Sign up</font></a>
             </div>
             <div id="bottom">
-                <a href="">Support</a>
-                <div>Version {version} </div>
-                <a href="">Disclaimer</a>
+                <a href="" id="Support">Support</a>
+                <div id="Version">Version {version} </div>
+                <a href="" id="Disclaimer">Disclaimer</a>
             </div>
         </div>
     );

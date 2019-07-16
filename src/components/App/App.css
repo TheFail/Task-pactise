@@ -2,6 +2,7 @@
     text-align: center;
     font-family: 'Roboto-Regular', sans-serif;
     font-size: calc(8px + 2vmin);
+    height: 100%;
 }
 
 .App-header {
@@ -12,10 +13,6 @@
     color: white;
 }
 
-.App-link {
-    color: #61dafb;
-}
-
 #top {
     position: absolute;
     display: flex;
@@ -23,17 +20,20 @@
     align-items: center;
     justify-content: center;
     background-color: #F51240;
-    height: 25%;
+    height: calc(22% + 2vmin);;
     width: 100%;
 }
 
-#logo {
+img {
+    margin-top: calc(12% + 1vmin);
+    position: center;
     align-content: center;
+    height: calc(45% + 5vmin);
 }
 
 #form {
-    margin-top: 15%;
-    position: static;
+    margin: 15% 39%;
+    position: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,8 +41,6 @@
     background-color: white;
 
 }
-
-
 
 #forgot {
     position: sticky;
@@ -52,10 +50,24 @@
 #bottom {
     display: flex;
     bottom: 10px;
-    margin-bottom: 0px;
-    position: absolute;
+    /* margin-bottom: 0px; */
+    position: sticky;
     width: 100%;
-    align-items: stretch;
+}
+
+#Support{
+    position: absolute;
+    margin-left: 0%;
+
+}
+
+#Version{
+    position: center;
+}
+
+#Disclaimer{
+    position: absolute;
+    margin-right: 0%;
 }
 
 a {

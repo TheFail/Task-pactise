@@ -1,5 +1,6 @@
 import React from 'react';
 import './Button.css';
+import Login from '../Login/Login.js'
 
 
 function Button (props)
@@ -7,7 +8,7 @@ function Button (props)
  if (props.type=="Login_Handler") {
     return (
     <div>
-        <button type="button" id="button" className="button"><span>Login</span></button>
+        <button type="button" id="button" className="button" onClick={Login}><span>Login</span></button>
     </div>
     )
 }
