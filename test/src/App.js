@@ -23,12 +23,12 @@ function App() {
               </div>
             </header>
             <div id="login">
-                <input id="in_email" type="text" required pattern="Username or Email"></input>
-                <input id="in_password" type="password" required pattern="Password"></input>
-                    <a href="">Forgot your password?</a>
-                <button type="submit" id="button">Login</button>
+                <input id="in_email" type="text" required placeholder="Username or Email"></input>
+                <input id="in_password" type="password" required placeholdert="Password"></input>
+                    <a href="" id="forgot">Forgot your password?</a>
+                <button type="button" id="button" onClick="s" className="button"><span>Login</span></button>
                 No have account? Sign up for free.
-                <a href=""><font id="sign_up">Sign up</font></a>
+                 <a href=""><font id="sign_up">Sign up</font></a>
             </div>
             <div id="bottom">
                 <a href="">Support</a>

@@ -1,34 +1,34 @@
 .App {
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-family: 'Roboto-Regular', sans-serif;
+    font-size: calc(8px + 2vmin);
 }
 
 .App-header {
-  background-color: white;
-  min-height: 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: white;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 #top {
     display: flex;
     flex-direction: column;
     align-items: center;
-  justify-content: center;
-  background-color: #F51240;
-  height: 200px;
-  width: 100%;
+    justify-content: center;
+    background-color: #F51240;
+    height: 200px;
+    width: 100%;
 }
 
 #logo {
-  align-content: center;
+    align-content: center;
 }
 
 #login {
@@ -36,34 +36,85 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-  justify-content: center;
-  background-color: white;
+    justify-content: center;
+    background-color: white;
 
 }
 
-#input {
-    width: 250px;
+input {
+    font-family: 'Roboto-Regular', sans-serif;
+    font-size: calc(8px + 2vmin);
+    height: 30px;
+    width: 300px;
+    border: 1px solid transparent grey;
+    border-radius: 4px;
+    border-bottom: 2px solid #F51240;
+    size: 300px;
+
 }
 
-#bottom {
-    margin-bottom: 0px;
-    display: flex;
-    flex-direction: line;
-  justify-content: center;
+a[id=forgot] {
+    margin-right: 1px;
+
+}
+
+.bottom {
+    display: inline-block;
+    bottom: 0;
+
 }
 
 #a {
-  color: #F51240;
-  font-size: 15px;
+    color: #F51240;
+    font-size: 15px;
 
 }
 
-#button {
-  width: 300px;
-  height: 40px;
-  background-color: #F51240;
-  border: 2px;
-  border-color: black;
-  text-align: center;
+.button {
+    border-radius: 4px;
+    background-color: #F51240;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Roboto-Regular', sans-serif;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    box-shadow: 0 5px #FFFFFF;
+}
 
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.button:hover {background-color: #F51240}
+
+.button:active {
+  background-color: #F51240;
+  box-shadow: 0 2px #FFFFFF;
+  transform: translateY(4px);
 }
