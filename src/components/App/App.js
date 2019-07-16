@@ -1,8 +1,9 @@
 import React from 'react';
-import logo from './assets/img/Logo.png';
+import Logo from '../assets/img/Logo.png'
 import './App.css';
+import Button from '../Button/Button.js'
 
-console.log(logo);
+console.log(Logo);
 var version="1.0.0";
 
 
@@ -13,15 +14,15 @@ function App() {
             <header className="App-header">
               <div id="top" name="top">
                 <div id="logo" >
-                <img src="{logo}" alt="Vitim+"></img>
+                <img src={Logo} alt="Vitim+"></img>
                 </div>
               </div>
             </header>
-            <div id="login">
+            <div id="form">
                 <input id="in_email" type="text" required placeholder="Username or Email"></input>
-                <input id="in_password" type="password" required placeholdert="Password"></input>
+                <input id="in_password" type="password" required placeholder="Password"></input>
                     <a href="" id="forgot">Forgot your password?</a>
-                <button type="button" id="button" onClick="s" className="button"><span>Login</span></button>
+                <Button login > </Button >
                 No have account? Sign up for free.
                  <a href=""><font id="sign_up">Sign up</font></a>
             </div>
