@@ -1,7 +1,8 @@
 import React from 'react';
 import Logo from '../assets/img/Logo.png'
 import './App.css';
-import Button from '../Button/Button.js'
+import Button from '../Button/Button.js';
+import Input from '../Input/Input.js';
 
 console.log(Logo);
 var version="1.0.0";
@@ -19,10 +20,10 @@ function App() {
               </div>
             </header>
             <div id="form">
-                <input id="in_email" type="text" required placeholder="Username or Email"></input>
-                <input id="in_password" type="password" required placeholder="Password"></input>
+                <Input type="log_email"></Input>
+                <Input type="log_password"></Input>
                     <a href="" id="forgot">Forgot your password?</a>
-                <Button login > </Button >
+                <Button type="Login_Handler"></Button >
                 No have account? Sign up for free.
                  <a href=""><font id="sign_up">Sign up</font></a>
             </div>

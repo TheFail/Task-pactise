@@ -1,2 +1,2 @@
-# Task-pactise
-Practice task of summer
+# Task-practise
+Autorisation forin ReactJS on GLUU 
