@@ -5,11 +5,6 @@ import './App.css';
 console.log(logo);
 var version="1.0.0";
 
-function img(){
-    return(
-        <img src="{logo}" alt="Vitim+"></img>
-    )
-}
 
 function App() {
 
@@ -18,7 +13,7 @@ function App() {
             <header className="App-header">
               <div id="top" name="top">
                 <div id="logo" >
-                {img()}
+                <img src="{logo}" alt="Vitim+"></img>
                 </div>
               </div>
             </header>
