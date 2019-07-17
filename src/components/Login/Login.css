@@ -1,0 +1,15 @@
+#form {
+    margin: 25vh 39vh 10vh;
+    position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+
+}
+
+#forgot {
+    position: sticky;
+    margin-right: 0%;
+}

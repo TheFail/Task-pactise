@@ -1,8 +1,8 @@
 import React from 'react';
 import Logo from '../assets/img/Logo.png';
 import './App.css';
-import Button from '../Button/Button.js';
-import Input from '../Input/Input.js';
+import Login from '../Login/Login.js';
+import Registration from '../Registration/Registration.js'
 
 console.log(Logo);
 var version="1.0.0";
@@ -19,14 +19,8 @@ function App() {
                 </div>
               </div>
             </header>
-            <div id="form">
-                <Input type="log_email"></Input>
-                <Input type="log_password"></Input>
-                    <a href="" id="forgot">Forgot your password?</a>
-                <Button type="Login_Handler"></Button >
-                No have account? Sign up for free.
-                 <a href=""><font id="sign_up">Sign up</font></a>
-            </div>
+            <Registration/>
+            {/* <Login ></Login> */}
             <div id="bottom">
                 <a href="" id="Support">Support</a>
                 <div id="Version">Version {version} </div>

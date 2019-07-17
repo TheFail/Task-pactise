@@ -1,3 +1,4 @@
+
 .App {
     text-align: center;
     font-family: 'Roboto-Regular', sans-serif;
@@ -20,7 +21,7 @@
     align-items: center;
     justify-content: center;
     background-color: #F51240;
-    height: calc(22% + 2vmin);;
+    height: calc(22% + 2vmin);
     width: 100%;
 }
 
@@ -32,7 +33,7 @@ img {
 }
 
 #form {
-    margin: 15% 39%;
+    margin: 30vh 39vh 10vh;
     position: center;
     display: flex;
     flex-direction: column;
@@ -50,8 +51,7 @@ img {
 #bottom {
     display: flex;
     bottom: 10px;
-    /* margin-bottom: 0px; */
-    position: sticky;
+    position: fixed;
     width: 100%;
 }
 

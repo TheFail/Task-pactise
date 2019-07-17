@@ -1,0 +1,20 @@
+#Registration {
+    margin: 30vh 39vh 0vh;
+    position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+
+}
+
+Input[type="date"]:before {
+    content: attr(placeholder) !important;
+    color: rgb(0, 0, 0);
+    margin-right: 0.5em;
+  }
+  Input[type="date"]:focus:before,
+  Input[type="date"]:valid:before {
+    content: "";
+  }
