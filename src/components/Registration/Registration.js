@@ -42,6 +42,7 @@ function Registration_Form () {
       <div id="Password">
         <Input type="password" id="reg_password" required="required" placeholder="Password" />
       </div>
+      <font value="The password must contain at least 8 characters. You can use letters, numbers and symbols from the list: `! @ # $% ^ & * () _ - + = [] {}; :  |,. <> \ /?" size="8" />
       <Button type="Registration_Handler" />
       <a href="" onClick='{<App form={<Login/>} />}'>Back to Login</a>
     </div>

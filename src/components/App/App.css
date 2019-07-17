@@ -32,7 +32,7 @@ img {
     height: calc(45% + 5vmin);
 }
 
-/* #Go {
+#Go {
     margin: 30vh 39vh 10vh;
     position: center;
     display: flex;
@@ -41,7 +41,7 @@ img {
     justify-content: center;
     background-color: white;
 
-} */
+}
 
 #forgot {
     position: sticky;

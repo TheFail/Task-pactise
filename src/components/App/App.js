@@ -18,7 +18,7 @@ function App (prop) {
         </div>
       </header>
       <div id="Go">
-        <Login />
+        <Registration />
 
         {/* {prop.form} */}
       </div>
