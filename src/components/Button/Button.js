@@ -1,25 +1,21 @@
-import React from 'react';
-import './Button.css';
+import React from 'react'
+import './Button.css'
 import Login from '../Login/Login.js'
 
-
-function Button (props)
-{
- if (props.type=="Login_Handler") {
+function Button (props) {
+  if (props.type == 'Login_Handler') {
     return (
-    <div>
+      <div>
         <button type="button" id="button" className="button" onClick={Login}><span>Login</span></button>
-    </div>
+      </div>
     )
-}
-
-else if (props.type=="Registration_Handler") {
+  } else if (props.type == 'Registration_Handler') {
     return (
-        <div>
-            <button type="button" id="button" className="button" ><span>Registration</span></button>
-        </div>
-        )
-}
+      <div>
+        <button type="button" id="button" className="button" ><span>Registration</span></button>
+      </div>
+    )
+  }
 };
 
-export default Button;
+export default Button

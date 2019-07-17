@@ -66,6 +66,7 @@ img {
 }
 
 #bottom> #Disclaimer{
+    text-align: right;
     position: absolute;
     margin-right: 0%;
 }
