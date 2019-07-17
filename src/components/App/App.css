@@ -1,5 +1,5 @@
 
-.App {
+.Appt {
     text-align: center;
     font-family: 'Roboto-Regular', sans-serif;
     font-size: calc(8px + 2vmin);
@@ -32,7 +32,7 @@ img {
     height: calc(45% + 5vmin);
 }
 
-#form {
+/* #Go {
     margin: 30vh 39vh 10vh;
     position: center;
     display: flex;
@@ -41,7 +41,7 @@ img {
     justify-content: center;
     background-color: white;
 
-}
+} */
 
 #forgot {
     position: sticky;
@@ -55,17 +55,17 @@ img {
     width: 100%;
 }
 
-#Support{
+#bottom> #Support{
     position: absolute;
     margin-left: 0%;
 
 }
 
-#Version{
+#bottom> #Version{
     position: center;
 }
 
-#Disclaimer{
+#bottom> #Disclaimer{
     position: absolute;
     margin-right: 0%;
 }

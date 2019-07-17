@@ -1,17 +1,19 @@
 import React from 'react';
 import Logo from '../assets/img/Logo.png';
 import './App.css';
+import Form from '../Form/Form.js';
 import Login from '../Login/Login.js';
 import Registration from '../Registration/Registration.js'
+
+
 
 console.log(Logo);
 var version="1.0.0";
 
-
-function App() {
+function App(prop) {
 
     return (
-        <div className="App" >
+        <div className="Appt" >
             <header className="App-header">
               <div id="top" name="top">
                 <div id="logo" >
@@ -19,8 +21,11 @@ function App() {
                 </div>
               </div>
             </header>
-            <Registration/>
-            {/* <Login ></Login> */}
+            <div id="Go">
+             <Registration />
+
+            {prop.form}
+            </div>
             <div id="bottom">
                 <a href="" id="Support">Support</a>
                 <div id="Version">Version {version} </div>

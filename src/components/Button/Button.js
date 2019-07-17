@@ -16,7 +16,7 @@ function Button (props)
 else if (props.type=="Registration_Handler") {
     return (
         <div>
-            <button type="button" id="button" className="button"><span>Registration</span></button>
+            <button type="button" id="button" className="button" ><span>Registration</span></button>
         </div>
         )
 }

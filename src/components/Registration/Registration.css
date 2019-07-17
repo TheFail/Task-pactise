@@ -18,3 +18,47 @@ Input[type="date"]:before {
   Input[type="date"]:valid:before {
     content: "";
   }
+
+table input{
+    margin-top: 0px;
+    font-family: 'Roboto-Regular', sans-serif;
+    font-size: calc(8px + 2vmin);
+    height: calc(15px + 2vmin);
+    border: none;
+}
+
+table {
+    margin: 5px;
+}
+
+Input{
+    border: 1px solid gray;
+    border-bottom: 2px solid rgb(201, 18, 55);
+    border-radius: 5px;
+    width: 300px;
+
+}
+
+table> td {
+    font-family: 'Roboto-Regular', sans-serif;
+    font-size: calc(8px + 2vmin);
+    height: calc(15px + 2vmin);
+    border: 1px solid gray;
+    border-radius: 5px;
+    border-bottom: 2px solid rgb(201, 18, 55);
+    width: 300px;
+
+}
+
+table> td> tr {
+    margin-top: 5px;
+    font-family: 'Roboto-Regular', sans-serif;
+    font-size: calc(8px + 2vmin);
+    height: calc(15px + 2vmin);
+    border: 1px solid gray;
+    border-bottom: 2px solid rgb(201, 18, 55);
+}
+
+input[type=Date]{
+    font-language-override: "ENG";
+}
