@@ -49,26 +49,9 @@ img {
 }
 
 #bottom {
-    display: flex;
-    bottom: 10px;
-    position: fixed;
-    width: 100%;
-}
-
-#bottom> #Support{
+    display: inline-flex;
     position: absolute;
-    margin-left: 0%;
-
-}
-
-#bottom> #Version{
-    position: center;
-}
-
-#bottom> #Disclaimer{
-    text-align: right;
-    position: absolute;
-    margin-right: 0%;
+    width: 100vh;
 }
 
 a {

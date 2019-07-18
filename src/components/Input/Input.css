@@ -3,7 +3,7 @@
     font-family: 'Roboto-Regular', sans-serif;
     font-size: calc(8px + 2vmin);
     height: calc(15px + 2vmin);
-    width: 300px;
+    width: calc(350px + 2vmin);;
     border: 1px solid grey;
     border-radius: 5px;
     border-bottom: 2px solid rgb(201, 18, 55);

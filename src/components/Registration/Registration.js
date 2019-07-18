@@ -6,7 +6,7 @@ import Login from '../Login/Login.js'
 import Form from '../Form/Form.js'
 import App from '../App/App.js'
 
-function Registration_Form () {
+function RegistrationForm () {
   return (
     <div id="Registration">
       <div id="Name">
@@ -50,4 +50,4 @@ function Registration_Form () {
   )
 }
 
-export default Registration_Form
+export default RegistrationForm

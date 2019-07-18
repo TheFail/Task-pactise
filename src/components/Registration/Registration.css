@@ -1,5 +1,5 @@
 #Registration {
-    margin: 30vh 39vh 0vh;
+    /* margin: 30vh 39vh 0vh; */
     position: center;
     display: flex;
     flex-direction: column;
@@ -19,7 +19,7 @@ Input[type="date"]:before {
     content: "";
   }
 
-table input{
+table> * > * > Input{
     margin-top: 0px;
     font-family: 'Roboto-Regular', sans-serif;
     font-size: calc(8px + 2vmin);
@@ -28,37 +28,37 @@ table input{
 }
 
 table {
+    width: calc(350px + 2vmin);
     margin: 5px;
 }
 
-Input{
+/* Input{
     border: 1px solid gray;
     border-bottom: 2px solid rgb(201, 18, 55);
     border-radius: 5px;
     width: 300px;
+} */
 
-}
-
-table> th {
+table> th,td {
     font-family: 'Roboto-Regular', sans-serif;
     font-size: calc(8px + 2vmin);
     height: calc(15px + 2vmin);
     border: 1px solid gray;
     border-radius: 5px;
-    border-bottom: 2px solid rgb(201, 18, 55);
+    /* border-bottom: 2px solid rgb(201, 18, 55); */
     width: 300px;
 
 }
 
-table> th> tr {
+table> * > tr {
     margin-top: 5px;
     font-family: 'Roboto-Regular', sans-serif;
     font-size: calc(8px + 2vmin);
     height: calc(15px + 2vmin);
     border: 2px solid gray;
-    border-bottom: 2px solid rgb(201, 18, 55);
+    /* border-bottom: 2px solid rgb(201, 18, 55); */
 }
 
-input[type=Date]{
+Input[type=Date]{
     font-language-override: "ENG";
 }
