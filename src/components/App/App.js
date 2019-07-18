@@ -11,21 +11,21 @@ function App (prop) {
   return (
     <div className="Appt" >
       <header className="App-header">
-        <div id="top" name="top">
-          <div id="logo" >
+        <div className="top" name="top">
+          <div className="logo" >
             <img src={Logo} alt="Vitim+"></img>
           </div>
         </div>
       </header>
-      <div id="Go">
+      <div className="Go">
         <Registration />
 
         {/* {prop.form} */}
       </div>
-      <div id="bottom">
-        <a href="" id="Support">Support</a>
-        <div id="Version">Version  </div>
-        <a href="" id="Disclaimer">Disclaimer</a>
+      <div className="bottom">
+        <a href="" className="Support"> Support</a>
+        <div className="Version">Version  </div>
+        <a href="" className="Disclaimer">Disclaimer</a>
       </div>
     </div>
   )
