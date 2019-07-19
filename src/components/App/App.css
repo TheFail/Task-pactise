@@ -2,7 +2,7 @@
 .Appt {
     text-align: center;
     font-family: 'Roboto-Regular', sans-serif;
-    font-size: calc(8px + 2vmin);
+    font-size: 20px;
     height: 100%;
     position: relative;
     min-height:100%;
@@ -28,7 +28,7 @@
 }
 
 .logo{
-    height: inherit;
+    height: 100%;
 }
 
 img {

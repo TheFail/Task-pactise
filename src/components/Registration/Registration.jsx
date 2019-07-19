@@ -1,9 +1,8 @@
 import React from 'react'
 import './Registration.css'
-import Button from '../Button/Button.js'
-import Input from '../Input/Input.js'
-import Login from '../Login/Login.js'
-import Form from '../Form/Form.js'
+import Button from '../Button/Button.jsx'
+import Login from '../Login/Login.jsx'
+import Form from '../Form/Form.jsx'
 import App from '../App/App.js'
 import $ from 'jquery'
 
@@ -42,7 +41,7 @@ function RegistrationForm () {
         </div>
       </div>
       <Button type="Registration_Handler" />
-      <a href="" onClick="{<App form={<Login/>} />}">Back to Login</a>
+      <a href="" onClick={<Form />}>Back to Login</a>
     </div>
 
   )

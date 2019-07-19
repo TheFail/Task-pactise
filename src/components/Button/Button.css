@@ -4,10 +4,10 @@
     border: none;
     color: #FFFFFF;
     text-align: center;
-    font-size: calc(8px + 2vmin);
+    font-size: 20px;
     font-family: 'Roboto-Regular', sans-serif;
-    padding: calc(10px + 1vmin);
-    width: calc(150px + 20vmin);
+    width: 200px;
+    height: 50px;
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;

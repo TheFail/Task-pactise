@@ -1,9 +1,9 @@
 import React from 'react'
 import Logo from '../assets/img/Logo.png'
 import './App.css'
-import Form from '../Form/Form.js'
-import Login from '../Login/Login.js'
-import Registration from '../Registration/Registration.js'
+import Form from '../Form/Form.jsx'
+import Login from '../Login/Login.jsx'
+import Registration from '../Registration/Registration.jsx'
 
 console.log(Logo)
 
@@ -18,7 +18,7 @@ function App (prop) {
         </div>
       </header>
       <div className="Go">
-        <Login />
+        <Form />
 
         {/* {prop.form} */}
       </div>
