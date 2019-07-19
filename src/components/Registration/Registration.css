@@ -1,94 +1,100 @@
 .Registration {
-    /* margin: 30vh 39vh 0vh; */
-    position: center;
+    margin: 25vh 39vh 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    width: calc(350px + 2vmin);
+    text-align: center;
 }
 
-
-
-Input[type="date"]:before {
+input[type="date"]:before {
     content: attr(placeholder) !important;
     color: grey;
     margin-right: 0.5em;
 }
-Input[type="date"]:focus:before,
-Input[type="date"]:valid:before {
+input[type="date"]:focus:before,
+input[type="date"]:valid:before {
     content: "";
 }
 
-table {
-    border-spacing: 0;
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+}
+
+.form-signin .checkbox {
+    font-weight: 400;
+}
+
+.form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+
+.form-signin .up {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin .down {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.form-signin .md {
+margin-bottom: -1px;
+border-radius: 0;
+}
+
+.form-signin .marg {
+margin-top: 10px;
+}
+
+.Psw{
+    margin-top: -10px;
+    text-align: center;
+    font-size: 70%;
+    font-style: inherit;
+    color: grey;
     width: inherit;
-    margin: 5px;
 }
 
-table>th>tr> Input{
-    margin-top: 0px ;
-    font-family: 'Roboto-Regular', sans-serif ;
-    font-size: calc(8px + 2vmin) ;
-    height: calc(15px + 2vmin) ;
-    border: none ;
-    width: inherit ;
-}
-
-/* Input{
-    border: 1px solid gray;
-    border-bottom: 2px solid rgb(201, 18, 55);
-    border-radius: 5px;
-    width: 300px;
-} */
-
-.input-group-vertical{
-    border-collapse: collapse;
-}
-
-table> th, td {
-    font-family: 'Roboto-Regular', sans-serif;
-    font-size: calc(8px + 2vmin);
-    height: calc(15px + 2vmin);
-    border: 1px solid gray;
-    border-radius: 5px;
-    /* border-bottom: 2px solid rgb(201, 18, 55); */
-}
-
-#Read{
-    width: 500px !important;
-}
-
-table> * > tr {
+.container{
     margin-top: 5px;
-    font-family: 'Roboto-Regular', sans-serif;
-    font-size: calc(8px + 2vmin);
-    height: calc(15px + 2vmin);
-    border: 2px solid gray;
-    /* border-bottom: 2px solid rgb(201, 18, 55); */
+    width: 120%;
 }
 
-Input[type=Date]{
-    font-language-override: "ENG";
+.row{
+    width: 120%;
 }
 
+#SCTCUargee{
+    font-size: 80%;
+}
+
+/* The switch - the box around the slider */
 .switch {
     position: relative;
     display: inline-block;
     width: 60px;
     height: 34px;
-  }
+}
 
-  /* Hide default HTML checkbox */
-  .switch input {
+/* Hide default HTML checkbox */
+.switch input {
     opacity: 0;
     width: 0;
     height: 0;
-  }
+}
 
-  /* The slider */
-  .slider {
+/* The slider */
+.slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -98,9 +104,9 @@ Input[type=Date]{
     background-color: #ccc;
     -webkit-transition: .4s;
     transition: .4s;
-  }
+}
 
-  .slider:before {
+.slider:before {
     position: absolute;
     content: "";
     height: 26px;
@@ -110,27 +116,29 @@ Input[type=Date]{
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
-  }
+}
 
-  input:checked + .slider {
+input:checked + .slider {
     background-color: #F51240;
-  }
+}
 
-  input:focus + .slider {
+input:focus + .slider {
     box-shadow: 0 0 1px #F51240;
-  }
+}
 
-  input:checked + .slider:before {
+input:checked + .slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
-  }
+}
 
-  /* Rounded sliders */
-  .slider.round {
+/* Rounded sliders */
+.slider.round {
     border-radius: 34px;
-  }
+}
 
-  .slider.round:before {
+.slider.round:before {
     border-radius: 50%;
-  }
+}
+
+
