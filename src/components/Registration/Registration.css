@@ -15,6 +15,10 @@ input[type="date"]:valid:before {
     content: "";
 }
 
+.bottom{
+    bottom: auto;
+}
+
 .form-signin {
     width: 100%;
     max-width: 330px;

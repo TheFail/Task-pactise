@@ -1,9 +1,6 @@
 import React from 'react'
 import './Login.css'
 import Button from '../Button/Button.jsx'
-import Form from '../Form/Form.jsx'
-import Registration from '../Registration/Registration.jsx'
-import App from '../App/App.js'
 
 function Login () {
   return (
@@ -14,9 +11,9 @@ function Login () {
       </div>
       <a href="" id="forgot">Forgot your password?</a>
       <Button type="Login_Handler"></Button >
-      <div className="RegLink">
+      {/* <div className="RegLink">
         No have account? <a href="#" onClick={<Form.handleClick />}> Sign up </a> for free.
-      </div>
+      </div> */}
     </div>
   )
 }

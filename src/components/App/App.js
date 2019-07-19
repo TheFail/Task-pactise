@@ -2,12 +2,10 @@ import React from 'react'
 import Logo from '../assets/img/Logo.png'
 import './App.css'
 import Form from '../Form/Form.jsx'
-import Login from '../Login/Login.jsx'
-import Registration from '../Registration/Registration.jsx'
 
 console.log(Logo)
 
-function App (prop) {
+function App () {
   return (
     <div className="Appt" >
       <header className="App-header">
@@ -19,8 +17,6 @@ function App (prop) {
       </header>
       <div className="Go">
         <Form />
-
-        {/* {prop.form} */}
       </div>
       <div className="bottom">
         <a href="" className="Support"> Support</a>

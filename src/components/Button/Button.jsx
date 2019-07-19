@@ -1,7 +1,6 @@
 import React from 'react'
 import './Button.css'
-import Login from '../Login/Login.jsx'
-import Form from '../Form/Form.jsx'
+
 
 function Button (props) {
   if (props.type === 'Login_Handler') {
@@ -18,13 +17,13 @@ function Button (props) {
     )
   } else if (props.type === 'FIRST') {
     return (
-      <div>
-        <button type="button" id="change" className="button" onClick={props.onClick}><span>Sign up</span></button>
+      <div className="RegLink">
+        No have account? <a href="javascript:void(null);" onClick={props.onClick}> Sign up </a> for free.
       </div>)
   } else if (props.type === 'SECOND') {
     return (
       <div>
-        <button type="button" id="change" className="button" onClick={props.onClick}><span>Go to Login</span></button>
+        <a href="javascript:void(null);" onClick={props.onClick}>Back to Login</a>
       </div>)
   }
 };

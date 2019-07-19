@@ -1,10 +1,8 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import './Form.css'
-import Login from '../Login/Login.jsx'
 import Registration from '../Registration/Registration.jsx'
+import Login from '../Login/Login.jsx'
 import Button from '../Button/Button.jsx'
-import { tsPropertySignature } from '@babel/types'
 
 class Form extends React.Component {
   constructor (props, context) {

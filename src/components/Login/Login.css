@@ -4,6 +4,14 @@
     flex-direction: column;
 }
 
+#root{
+    height: 100%
+}
+
+.bottom{
+    bottom: 0;
+}
+
 #forgot {
     position: sticky;
     margin-right: 0%;
