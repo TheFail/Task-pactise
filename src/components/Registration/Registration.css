@@ -27,14 +27,13 @@ table {
     margin: 5px;
 }
 
-table>th>tr> .Input-standart{
-    margin-top: 0px !important;
-    font-family: 'Roboto-Regular', sans-serif !important;
-    font-size: calc(8px + 2vmin) !important;
-    height: calc(15px + 2vmin) !important;
-    border: none !important;
-    border-bottom: none !important;
-    width: inherit !important;
+table>th>tr> Input{
+    margin-top: 0px ;
+    font-family: 'Roboto-Regular', sans-serif ;
+    font-size: calc(8px + 2vmin) ;
+    height: calc(15px + 2vmin) ;
+    border: none ;
+    width: inherit ;
 }
 
 /* Input{
@@ -43,6 +42,10 @@ table>th>tr> .Input-standart{
     border-radius: 5px;
     width: 300px;
 } */
+
+.input-group-vertical{
+    border-collapse: collapse;
+}
 
 table> th, td {
     font-family: 'Roboto-Regular', sans-serif;
@@ -53,9 +56,9 @@ table> th, td {
     /* border-bottom: 2px solid rgb(201, 18, 55); */
 }
 
-/* #Read{
-    width: auto !important;
-} */
+#Read{
+    width: 500px !important;
+}
 
 table> * > tr {
     margin-top: 5px;
