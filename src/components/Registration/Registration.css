@@ -15,8 +15,14 @@ input[type="date"]:valid:before {
     content: "";
 }
 
-.bottom{
-    bottom: auto;
+.bottom {
+    display: flex;
+    left: 10px;
+    right: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    position: absolute;
 }
 
 .form-signin {
@@ -144,5 +150,3 @@ input:checked + .slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
-
-

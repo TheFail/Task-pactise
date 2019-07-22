@@ -26,9 +26,11 @@ class Form extends React.Component {
     this.active = this.state.active
 
     return (
-      <div>
+      <div className="Form">
         {this.active === 'FIRST' ? (
-          <Login />
+          <div>
+            <Login />
+          </div>
         ) : this.active === 'SECOND' ? (
           <Registration />
         ) : null}
