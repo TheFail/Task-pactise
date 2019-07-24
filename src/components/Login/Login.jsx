@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './Login.css'
-import Button from '../Button/Button.jsx'
-import { FormErrors } from './LoginError'
+import Putton from '../Button/Button.jsx'
+import Tooltip from '@material-ui/core/Tooltip'
 
 class Login extends Component {
   constructor (props) {
@@ -31,11 +31,11 @@ class Login extends Component {
     switch (fieldName) {
       case 'email':
         emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)
-        fieldValidationErrors.email = emailValid ? '' : ' is invalid'
+        fieldValidationErrors.email = emailValid ? '' : 'Email is invalid'
         break
       case 'password':
         passwordValid = value.length >= 8
-        fieldValidationErrors.password = passwordValid ? '' : ' is too short'
+        fieldValidationErrors.password = passwordValid ? '' : 'Passsword is too short'
         break
       default:
         break
@@ -58,15 +58,16 @@ class Login extends Component {
   render () {
     return (
       <div className="Login">
-        <div className="panel panel-default">
-          <FormErrors formErrors={this.state.formErrors} />
-        </div>
         <div className="form-signin">
-          <input value={this.state.email} onChange={this.handleUserInput} className= {`form-control up ${this.errorClass(this.state.formErrors.email)}`} type="email" id="log_email" required="required" placeholder="Email" name="email" />
-          <input value={this.state.password} onChange={this.handleUserInput} className={`form-control down ${this.errorClass(this.state.formErrors.password)}`} type="password" id="log_password" required="required" placeholder="Password" name="password" />
+          <Tooltip className="form-control up" title={this.state.formErrors.email} enterDelay={500} leaveDelay={200} placement="right">
+            <input value={this.state.email} onChange={this.handleUserInput} className= {`form-control up ${this.errorClass(this.state.formErrors.email)}`} type="email" id="log_email" required="required" placeholder="Email" name="email" />
+          </Tooltip>
+          <Tooltip className="form-control down" title={this.state.formErrors.password} enterDelay={500} leaveDelay={200} placement="right">
+            <input value={this.state.password} onChange={this.handleUserInput} className={`form-control down ${this.errorClass(this.state.formErrors.password)}`} type="password" id="log_password" required="required" placeholder="Password" name="password" />
+          </Tooltip>
         </div>
         <a href="" id="forgot">Forgot your password?</a>
-        <Button type="Login_Handler" disabled={!this.state.formValid} onClick="showMessage()"></Button >
+        <Putton type="Login_Handler" disabled={!this.state.formValid} onClick="showMessage()"></Putton >
       </div>
     )
   }

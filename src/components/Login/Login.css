@@ -49,3 +49,12 @@ border-radius: 0;
 .form-signin .marg {
 margin-top: 10px;
 }
+
+Tooltip {
+    background-color: #2727ad;
+    color: #F51240;
+    max-width:200;
+    Width: 220;
+    /* font-size: theme.typography.pxToRem(12); */
+    border: '1px solid #dadde9';
+  }
