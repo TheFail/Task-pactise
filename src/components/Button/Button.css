@@ -30,7 +30,7 @@
     transition: 0.5s;
 }
 
-.button:hover span {
+ .button:hover span {
     padding-right: 25px;
 }
 
@@ -45,4 +45,8 @@
   background-color: #F51240;
   box-shadow: 0 2px #FFFFFF;
   transform: translateY(4px);
+}
+
+.button:disabled {
+    background-color: rgb(116, 29, 47);
 }

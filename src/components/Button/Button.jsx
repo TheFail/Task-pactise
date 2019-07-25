@@ -11,7 +11,7 @@ function Button (props) {
   } else if (props.type === 'Registration_Handler') {
     return (
       <div>
-        <button type="submit" id="button" className="button" ><span>Registration</span></button>
+        <button type="submit" id="button" className="button" disabled={props.disabled}><span>Registration</span></button>
       </div>
     )
   } else if (props.type === 'FIRST') {

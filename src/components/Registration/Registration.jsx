@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './Registration.css'
 import Button from '../Button/Button.jsx'
-import { FormErrors } from './RegistrationError'
 import Tooltip from '@material-ui/core/Tooltip'
 
 class RegistrationForm extends Component {
@@ -23,7 +22,7 @@ class RegistrationForm extends Component {
         fName: '',
         lName: '',
         phone: '',
-        date: '' },
+        date: '' },Write-Warning
       emailValid: false,
       passwordValid: false,
       passwordConfValid: false,
@@ -172,7 +171,7 @@ class RegistrationForm extends Component {
             </div>
           </div>
         </div>
-        <Button type="Registration_Handler" />
+        <Button type="Registration_Handler" disabled={!this.state.formValid} />
       </div>
 
     )
