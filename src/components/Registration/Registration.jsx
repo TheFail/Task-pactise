@@ -22,7 +22,7 @@ class RegistrationForm extends Component {
         fName: '',
         lName: '',
         phone: '',
-        date: '' },Write-Warning
+        date: '' },
       emailValid: false,
       passwordValid: false,
       passwordConfValid: false,
