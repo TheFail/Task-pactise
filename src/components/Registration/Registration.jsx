@@ -120,9 +120,6 @@ class RegistrationForm extends Component {
     console.log(this.state.formErrors)
     return (
       <div className="Registration">
-        {/* <div className="panel panel-default">
-          <FormErrors formErrors={this.state.formErrors} />
-        </div> */}
         <div className="form-signin ">
           <Tooltip className="form-control up" title={this.state.formErrors.fName} enterDelay={500} leaveDelay={200} placement="right">
             <input value={this.state.fName} title={this.state.formErrors} onChange={this.handleUserInput} type="text" required placeholder="First Name" id="inputFrName" class={`form-control up ${this.errorClass(this.state.formErrors.fName)}`} name="fName"/>
@@ -139,7 +136,7 @@ class RegistrationForm extends Component {
           <Tooltip className="form-control up" title={this.state.formErrors.email} enterDelay={500} leaveDelay={200} placement="right">
             <input value={this.state.email} onChange={this.handleUserInput} class={`form-control up ${this.errorClass(this.state.formErrors.email)}`} name="email" type="email" id="reg_Email" required="required" placeholder="Email" />
           </Tooltip>
-          <Tooltip className="form-control down" title={this.state.formErrors.date} enterDelay={500} leaveDelay={200} placement="right">
+          <Tooltip className="form-control down" title={this.state.formErrors.phone} enterDelay={500} leaveDelay={200} placement="right">
             <input value={this.state.phone} onChange={this.handleUserInput} class={`form-control down ${this.errorClass(this.state.formErrors.phone)}`} name="phone" type="tel" id="reg_Phone" required="required" placeholder="Phone Number" />
           </Tooltip>
         </div>

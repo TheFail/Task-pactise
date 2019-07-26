@@ -50,3 +50,7 @@
 .button:disabled {
     background-color: rgb(116, 29, 47);
 }
+
+.RegLink{
+    width: inherit;
+}
