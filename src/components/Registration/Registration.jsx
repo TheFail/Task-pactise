@@ -117,7 +117,7 @@ class RegistrationForm extends Component {
   }
 
   render () {
-    console.log(this.state.formErrors)
+    // console.log(this.state.formErrors)
     return (
       <div className="Registration">
         <div className="form-signin ">

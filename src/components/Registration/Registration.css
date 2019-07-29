@@ -1,15 +1,16 @@
-.Registration {
+/* .Registration {
     margin: 25vh 39vw 10px;
     display: flex;
     flex-direction: column;
     text-align: center;
-}
+} */
 
 input[type="date"]:before {
     content: attr(placeholder) !important;
     color: grey;
     margin-right: 0.5em;
 }
+
 input[type="date"]:focus:before,
 input[type="date"]:valid:before {
     content: "";
