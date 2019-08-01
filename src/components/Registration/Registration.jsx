@@ -15,6 +15,7 @@ class RegistrationForm extends Component {
       lName: '',
       phone: '',
       date: '',
+      SCTCU: 'checked',
       formErrors: { email: '',
         password: '',
         passwordConf: '',
@@ -22,7 +23,8 @@ class RegistrationForm extends Component {
         fName: '',
         lName: '',
         phone: '',
-        date: '' },
+        date: '',
+        SCTCU: '' },
       emailValid: false,
       passwordValid: false,
       passwordConfValid: false,
@@ -31,9 +33,11 @@ class RegistrationForm extends Component {
       lNameValid: false,
       dateValid: false,
       phoneValid: false,
-      formValid: false
+      formValid: false,
+      SCTCUValid: true
     }
     this.handleUserInput = this.handleUserInput.bind(this)
+    this.usernameAuto = this.usernameAuto.bind(this)
   }
 
   handleUserInput (e) {
@@ -53,6 +57,7 @@ class RegistrationForm extends Component {
     let lNameValid = this.state.lNameValid
     let dateValid = this.state.dateValid
     let phoneValid = this.state.phoneValid
+    let SCTCUValid = this.state.SCTCUValid
     switch (fieldName) {
       case 'email':
         emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)
@@ -60,7 +65,7 @@ class RegistrationForm extends Component {
         break
       case 'password':
         passwordValid = value.length >= 8
-        fieldValidationErrors.password = passwordValid ? '' : 'Password is too short. Use 3 or many symbols'
+        fieldValidationErrors.password = passwordValid ? '' : 'Password is too short. Use 8 or many symbols'
         break
       case 'passwordConf':
         passwordConfValid = this.state.password === value
@@ -86,6 +91,10 @@ class RegistrationForm extends Component {
         phoneValid = value.length >= 1
         fieldValidationErrors.phone = phoneValid ? '' : 'Phone is not filled'
         break
+      case 'SCTCU':
+        SCTCUValid = value === 'checked'
+        fieldValidationErrors.SCTCU = SCTCUValid ? '' : 'SCTCU is not checked'
+        break
       default:
         break
     }
@@ -97,8 +106,9 @@ class RegistrationForm extends Component {
       fNameValid: fNameValid,
       lNameValid: lNameValid,
       dateValid: dateValid,
-      phoneValid: phoneValid
-    }, this.validateForm)
+      phoneValid: phoneValid,
+      SCTCUValid: SCTCUValid
+    })
   }
 
   validateForm () {
@@ -109,11 +119,22 @@ class RegistrationForm extends Component {
                               this.state.fNameValid &&
                               this.state.lNameValid &&
                               this.state.dateValid &&
-                              this.state.phoneValid })
+                              this.state.phoneValid &&
+                              this.state.SCTCUValid })
   }
 
   errorClass (error) {
     return (error.length === 0 ? '' : 'has-error')
+  }
+
+  usernameAuto () {
+    const emailValue = this.state.email
+    let emailDog = emailValue.search(/@/i)
+    if (emailDog === -1) {
+      emailDog = emailValue.length
+    }
+    const usermaneGet = emailValue.slice(0, emailDog)
+    this.setState({ username: usermaneGet || '' })
   }
 
   render () {
@@ -122,47 +143,46 @@ class RegistrationForm extends Component {
       <div className="Registration">
         <div className="form-signin ">
           <Tooltip className="form-control up" title={this.state.formErrors.fName} enterDelay={500} leaveDelay={200} placement="right">
-            <input value={this.state.fName} title={this.state.formErrors} onChange={this.handleUserInput} type="text" required placeholder="First Name" id="inputFrName" class={`form-control up ${this.errorClass(this.state.formErrors.fName)}`} name="fName"/>
+            <input value={this.state.fName} title={this.state.formErrors} onChange={this.handleUserInput} type="text" required placeholder="First Name" id="inputFrName" className={`form-control up ${this.errorClass(this.state.formErrors.fName)}`} name="fName"/>
           </Tooltip>
-          <input type="text" required placeholder="Middle Name (Not required)" id="inputMdName" class="form-control md"/>
+          <input type="text" required placeholder="Middle Name (Not required)" id="inputMdName" className="form-control md"/>
           <Tooltip className="form-control md" title={this.state.formErrors.lName} enterDelay={500} leaveDelay={200} placement="right">
-            <input value={this.state.lName} onChange={this.handleUserInput} type="text" required placeholder="Last Name" id="inputLsName" class={`form-control md ${this.errorClass(this.state.formErrors.lName)}`} name="lName"/>
+            <input value={this.state.lName} onChange={this.handleUserInput} type="text" required placeholder="Last Name" id="inputLsName" className={`form-control md ${this.errorClass(this.state.formErrors.lName)}`} name="lName"/>
           </Tooltip>
           <Tooltip className="form-control down" title={this.state.formErrors.date} enterDelay={500} leaveDelay={200} placement="right">
-            <input value={this.state.date} onChange={this.handleUserInput} class={`form-control down ${this.errorClass(this.state.formErrors.date)}`} name="date" type="date" id="reg_Date" required="required" placeholder="Date of Birth" />
+            <input value={this.state.date} onChange={this.handleUserInput} className={`form-control down ${this.errorClass(this.state.formErrors.date)}`} name="date" type="date" id="reg_Date" required="required" placeholder="Date of Birth" />
           </Tooltip>
         </div>
         <div className="form-signin marg" >
           <Tooltip className="form-control up" title={this.state.formErrors.email} enterDelay={500} leaveDelay={200} placement="right">
-            <input value={this.state.email} onChange={this.handleUserInput} class={`form-control up ${this.errorClass(this.state.formErrors.email)}`} name="email" type="email" id="reg_Email" required="required" placeholder="Email" />
+            <input value={this.state.email} onChange={this.handleUserInput} onKeyUp={this.usernameAuto} className={`form-control up ${this.errorClass(this.state.formErrors.email)}`} name="email" type="email" id="reg_Email" required="required" placeholder="Email" />
           </Tooltip>
           <Tooltip className="form-control down" title={this.state.formErrors.phone} enterDelay={500} leaveDelay={200} placement="right">
-            <input value={this.state.phone} onChange={this.handleUserInput} class={`form-control down ${this.errorClass(this.state.formErrors.phone)}`} name="phone" type="tel" id="reg_Phone" required="required" placeholder="Phone Number" />
+            <input value={this.state.phone} onChange={this.handleUserInput} className={`form-control down ${this.errorClass(this.state.formErrors.phone)}`} name="phone" type="tel" id="reg_Phone" required="required" placeholder="Phone Number" />
           </Tooltip>
         </div>
         <div className="form-signin">
-
           <Tooltip className="form-control up" title={this.state.formErrors.username} enterDelay={500} leaveDelay={200} placement="right">
-            <input value={this.state.username} onChange={this.handleUserInput} class={`form-control up ${this.errorClass(this.state.formErrors.username)}`} name="username" type="text" id="reg_username" required="required" placeholder="Username" />
+            <input value={this.state.username} onChange={this.handleUserInput} className={`form-control up ${this.errorClass(this.state.formErrors.username)}`} name="username" type="text" id="reg_username" required="required" placeholder="Username" />
           </Tooltip>
           <Tooltip className="form-control md" title={this.state.formErrors.password} enterDelay={500} leaveDelay={200} placement="right">
-            <input value={this.state.password} onChange={this.handleUserInput} class={`form-control md ${this.errorClass(this.state.formErrors.password)}`} name="password" type="password" id="reg_password" required="required" placeholder="Password" />
+            <input value={this.state.password} onChange={this.handleUserInput} className={`form-control md ${this.errorClass(this.state.formErrors.password)}`} name="password" type="password" id="reg_password" required="required" placeholder="Password" />
           </Tooltip>
           <Tooltip className="form-control down" title={this.state.formErrors.passwordConf} enterDelay={500} leaveDelay={200} placement="right">
-            <input value={this.state.passwordConf} onChange={this.handleUserInput} class={`form-control down ${this.errorClass(this.state.formErrors.passwordConf)}`} name="passwordConf" type="password" id="reg_passwordConf" required="required" placeholder="Password confirm" />
+            <input value={this.state.passwordConf} onChange={this.handleUserInput} className={`form-control down ${this.errorClass(this.state.formErrors.passwordConf)}`} name="passwordConf" type="password" id="reg_passwordConf" required="required" placeholder="Password confirm" />
           </Tooltip>
           <div className="Psw">
           The password must contain at least 8 characters. You can use letters, numbers and symbols from the list: `! @ # $% ^ &amp; * () _ - + = [] {}; : " |,. &lt;&gt; \ /?
           </div>
-          <div class="container">
-            <div class="row justify-content-center">
-              <div id="SCTCUargee" class="col" >
+          <div className="container">
+            <div className="row justify-content-center">
+              <div id="SCTCUargee" className="col" >
               I have read, understood and accept Secure Checks Terms & Conditions of Use
               </div>
-              <div class="col col-lg-auto align-self-center">
-                <label class="switch">
-                  <input type="checkbox" />
-                  <span class="slider round"></span>
+              <div className="col col-lg-auto align-self-center">
+                <label className="switch">
+                  <input type="checkbox" {...this.state.SCTCU} onClick={this.handleUserInput} className={this.errorClass(this.state.formErrors.SCTCU)} name="SCTCU" value={this.state.SCTCU}/>
+                  <span className="slider round" onClick={this.handleUserInput} name="SCTCU" value={this.state.SCTCU}></span>
                 </label>
               </div>
             </div>
@@ -170,7 +190,6 @@ class RegistrationForm extends Component {
         </div>
         <Button type="Registration_Handler" disabled={!this.state.formValid} />
       </div>
-
     )
   }
 }
