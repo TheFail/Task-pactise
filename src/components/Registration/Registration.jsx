@@ -15,7 +15,7 @@ class RegistrationForm extends Component {
       lName: '',
       phone: '',
       date: '',
-      SCTCU: 'checked',
+      SCTCU: false,
       formErrors: { email: '',
         password: '',
         passwordConf: '',
@@ -34,10 +34,12 @@ class RegistrationForm extends Component {
       dateValid: false,
       phoneValid: false,
       formValid: false,
-      SCTCUValid: true
+      SCTCUValid: false
     }
     this.handleUserInput = this.handleUserInput.bind(this)
     this.usernameAuto = this.usernameAuto.bind(this)
+    this.cneck = this.cneck.bind(this)
+    this.checked = false
   }
 
   handleUserInput (e) {
@@ -72,6 +74,7 @@ class RegistrationForm extends Component {
         fieldValidationErrors.passwordConf = passwordConfValid ? '' : 'Passwords does not match'
         break
       case 'username':
+        console.log(value)
         usernameValid = value.length >= 3
         fieldValidationErrors.username = usernameValid ? '' : 'Username is too short. Use 3 or many symbols'
         break
@@ -92,7 +95,7 @@ class RegistrationForm extends Component {
         fieldValidationErrors.phone = phoneValid ? '' : 'Phone is not filled'
         break
       case 'SCTCU':
-        SCTCUValid = value === 'checked'
+        SCTCUValid = value === 'true'
         fieldValidationErrors.SCTCU = SCTCUValid ? '' : 'SCTCU is not checked'
         break
       default:
@@ -137,6 +140,18 @@ class RegistrationForm extends Component {
     this.setState({ username: usermaneGet || '' })
   }
 
+  cneck () {
+    this.checked = this.refs.check_me.checked
+    console.log(this.checked)
+    if (this.checked === false) {
+      this.setState({ SCTCU: true })
+      this.checked = true
+    } else {
+      this.setState({ SCTCU: false })
+      this.checked = false
+    }
+  }
+
   render () {
     // console.log(this.state.formErrors)
     return (
@@ -163,7 +178,7 @@ class RegistrationForm extends Component {
         </div>
         <div className="form-signin">
           <Tooltip className="form-control up" title={this.state.formErrors.username} enterDelay={500} leaveDelay={200} placement="right">
-            <input value={this.state.username} onChange={this.handleUserInput} className={`form-control up ${this.errorClass(this.state.formErrors.username)}`} name="username" type="text" id="reg_username" required="required" placeholder="Username" />
+            <input value={this.state.username} onPaste={this.handleUserInput} onChange ={this.handleUserInput} className={`form-control up ${this.errorClass(this.state.formErrors.username)}`} name="username" type="text" id="reg_username" required="required" placeholder="Username" />
           </Tooltip>
           <Tooltip className="form-control md" title={this.state.formErrors.password} enterDelay={500} leaveDelay={200} placement="right">
             <input value={this.state.password} onChange={this.handleUserInput} className={`form-control md ${this.errorClass(this.state.formErrors.password)}`} name="password" type="password" id="reg_password" required="required" placeholder="Password" />
@@ -181,12 +196,13 @@ class RegistrationForm extends Component {
               </div>
               <div className="col col-lg-auto align-self-center">
                 <label className="switch">
-                  <input type="checkbox" {...this.state.SCTCU} onClick={this.handleUserInput} className={this.errorClass(this.state.formErrors.SCTCU)} name="SCTCU" value={this.state.SCTCU}/>
-                  <span className="slider round" onClick={this.handleUserInput} name="SCTCU" value={this.state.SCTCU}></span>
+                  <input type="checkbox" checked={this.checked} ref="check_me" onClick={this.handleUserInput} className={`checkbx ${this.errorClass(this.state.formErrors.SCTCU)}`} name="SCTCU" value={this.checked}/>
+                  <span className="slider round" onClick={this.cneck} name="SCTCU" value></span>
                 </label>
               </div>
             </div>
           </div>
+          {/* <input type="checkbox" onClick={this.cneck} ref="check_me"></input> */}
         </div>
         <Button type="Registration_Handler" disabled={!this.state.formValid} />
       </div>
