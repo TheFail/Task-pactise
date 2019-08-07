@@ -4,10 +4,6 @@ import './index.css'
 import App from './components/App/App.js'
 import * as serviceWorker from './serviceWorker'
 import dotenv from 'dotenv'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import $ from 'jquery';
-import Popper from 'popper.js';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 dotenv.config()
 ReactDOM.render(<App />, document.getElementById('root'))

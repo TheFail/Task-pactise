@@ -41,11 +41,15 @@
 .button:hover {background-color: #F51240}
 
 .button:active {
-  background:  linear-gradient(45deg, #F51240  30%, #FF8E53 90%);
+  background: #F51240;
 }
 
 .button:disabled {
      background-color: rgb(116, 29, 47); }
+
+.button:default {
+  background-color: #F51240
+}
 
 .RegLink{
     width: inherit;

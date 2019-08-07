@@ -5,26 +5,30 @@ import Form from '../Form/Form.jsx'
 
 console.log(Logo)
 
-function App () {
-  return (
-    <div className="Appt" >
-      <header className="App-header">
-        <div className="top" name="top">
-          <div className="logo" >
-            <img src={Logo} alt="Vitim+"></img>
+class App extends React.Component {
+
+  render () {
+    return (
+      <div className="Appt" >
+        <header className="App-header">
+          <div className="top" name="top">
+            <div className="logo" >
+              <img src={Logo} alt="Vitim+"></img>
+            </div>
           </div>
+        </header>
+        <div className="Go">
+          <Form />
+          {/* {Form} */}
         </div>
-      </header>
-      <div className="Go">
-        <Form />
+        <div className="bottom">
+          <a href="" className="Support"> Support</a>
+          <div className="Version">Version  </div>
+          <a href="" className="Disclaimer">Disclaimer</a>
+        </div>
       </div>
-      <div className="bottom">
-        <a href="" className="Support"> Support</a>
-        <div className="Version">Version  </div>
-        <a href="" className="Disclaimer">Disclaimer</a>
-      </div>
-    </div>
-  )
+    )
+  }
 }
 
 export default App

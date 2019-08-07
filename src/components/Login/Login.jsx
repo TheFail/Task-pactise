@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './Login.css'
 import Putton from '../Button/Button.jsx'
-import Tooltip from '@material-ui/core/Tooltip'
+import {FormErrors} from './LoginError'
 
 class Login extends Component {
   constructor (props) {
@@ -59,12 +59,11 @@ class Login extends Component {
     return (
       <div className="Login">
         <div className="form-signin">
-          <Tooltip className="form-control up" title={this.state.formErrors.email} enterDelay={500} leaveDelay={200} placement="right">
-            <input value={this.state.email} onChange={this.handleUserInput} className= {`form-control up ${this.errorClass(this.state.formErrors.email)}`} type="email" id="log_email" required="required" placeholder="Email" name="email" />
-          </Tooltip>
-          <Tooltip className="form-control down" title={this.state.formErrors.password} enterDelay={500} leaveDelay={200} placement="right">
-            <input value={this.state.password} onChange={this.handleUserInput} className={`form-control down ${this.errorClass(this.state.formErrors.password)}`} type="password" id="log_password" required="required" placeholder="Password" name="password" />
-          </Tooltip>
+          <input value={this.state.email} onChange={this.handleUserInput} className= {`form-control up ${this.errorClass(this.state.formErrors.email)}`} type="email" id="log_email" required="required" placeholder="Email" name="email" />
+          <input value={this.state.password} onChange={this.handleUserInput} className={`form-control down ${this.errorClass(this.state.formErrors.password)}`} type="password" id="log_password" required="required" placeholder="Password" name="password" />
+          <div className="panel panel-default">
+            <FormErrors formErrors={this.state.formErrors} className="fORMeRR"/>
+          </div>
         </div>
         <a href="" id="forgot">Forgot your password?</a>
         <Putton type="Login_Handler" disabled={!this.state.formValid} onClick="showMessage()"></Putton >
