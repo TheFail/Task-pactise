@@ -30,7 +30,7 @@ class App extends React.Component {
           <input checked={this.state.checked} type="checkbox" className="TopHov" name="top"/>
           <span className="top" onClick={this.cneck} name="top">
             <div className="logo" >
-              <img className="log" src={Logo} alt="Vitim+"></img>
+              <img className="logi" src={Logo} alt="Vitim+"></img>
             </div>
           </span>
         </header>

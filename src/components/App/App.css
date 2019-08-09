@@ -43,6 +43,12 @@ select:-webkit-autofill:focus {
   opacity: 1;
 }
 
+.logi {
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 85%;
+}
+
 .top {
   position: absolute;
   display: flex;
@@ -86,17 +92,14 @@ select:-webkit-autofill:focus {
   transform: scaleY(100vh);
 }
 
-.TopHov:checked + .log{
+.TopHov:checked + .logi{
   height: 300px;
 }
 
 .logo{
+  margin-top: auto;
+  margin-bottom: auto;
   height: 100%;
-}
-
-.log {
-  margin-top: 2%;
-  height: 95%;
 }
 
 .Go {

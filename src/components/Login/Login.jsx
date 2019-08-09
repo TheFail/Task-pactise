@@ -80,7 +80,7 @@ class Login extends Component {
           <input value={this.state.email} onChange={this.handleUserInput} className= {`login-control up ${this.errorClass(this.state.formErrors.email)}`} type="email" id="log_email" required="required" placeholder="Email" name="email" />
           <div className="password">
             <input value={this.state.password} onChange={this.handleUserInput} className={`login-control down password__input ${this.errorClass(this.state.formErrors.password)}`} type={this.state.type} id="log_password" required="required" placeholder="Password" name="password"/>
-            <span className="password__show" onClick={this.showHide}><img src={this.state.type === 'input' ? PassUnLock : PassLock} alt={this.state.type === 'input' ? 'PassLock' : 'Show'}></img></span>
+            <span className="password__show" onClick={this.showHide}><img className="locking" src={this.state.type === 'input' ? PassUnLock : PassLock} alt={this.state.type === 'input' ? 'PassLock' : 'Show'}></img></span>
           </div>
           <div className="panel panel-default">
             <FormErrors formErrors={this.state.formErrors} className="fORMeRR"/>

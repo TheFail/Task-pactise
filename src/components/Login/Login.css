@@ -78,9 +78,15 @@ p{
   position: absolute;
   bottom: 20px;
   height: 16px;
+  width: auto;
   right: 2px;
   padding: 4px 8px;
   border-radius: 4pt;
   font-weight: 700;
   font-size: .8em;
+}
+
+.locking{
+  height: 16px;
+  width: auto;
 }
