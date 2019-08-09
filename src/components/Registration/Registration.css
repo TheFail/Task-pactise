@@ -1,70 +1,80 @@
-input[type="date"]::before {
+/* .Registration{
+  background:
+  UIColor(red: 199/255, green: 199/255, blue: 205/255)
+} */
+Input[type="date"]:before {
   content: attr(placeholder) !important;
-  color: grey;
+  color: rgb(74, 91, 110);
   margin-right: 0.5em;
-  font-family: 'Roboto-Regular', sans-serif;
 }
-
-input[type="date"]:focus::before,
-input[type="date"]:valid::before {
+Input[type="date"]:focus:before,
+Input[type="date"]:valid:before {
   content: "";
 }
 
 input[type="date"] {
-  font-family: 'Roboto-Regular', sans-serif;
+  color: rgb(74, 91, 110);
+ font-family: 'Roboto-Regular', sans-serif;
 }
 
-.form-signin {
+.form-registration {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
   max-width: 330px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.form-signin .checkbox {
+.form-registration .checkbox {
   font-weight: 400;
 }
 
-.form-signin .form-control {
+.form-registration .registration-control {
   position: relative;
   box-sizing: border-box;
-  height: 40px;
-  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  height: 45px;
+  font-size: 13pt;
   width: 100%;
   padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  color: rgb(74, 91, 110);
+  border: 1px solid rgb(200, 199, 204);
+  border-radius: 4pt;
 }
 
-.form-signin .form-control:focus {
+.form-registration .registration-control:focus {
   z-index: 2;
 }
 
-.form-signin .up {
+.form-registration .up {
   margin-bottom: -1px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.form-signin .down {
+.form-registration .down {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
-.form-signin .md {
+.form-registration .md {
   margin-bottom: -1px;
   border-radius: 0px;
 }
 
-.form-signin .marg {
+.form-registration .marg {
   margin-top: 10px;
 }
 
 .Psw {
-  margin-top: -10px;
+  margin-top: -5px;
   text-align: center;
-  font-size: 70%;
+  font-size: 90%;
   font-style: inherit;
-  color: grey;
+  color: rgb(181, 181, 181);
   width: inherit;
 }
 
@@ -78,10 +88,6 @@ input[type="date"] {
   align-items: center;
   justify-content: center;
   width: 65px;
-}
-
-.SCTCUargee {
-  font-size: 80%;
 }
 
 /* The switch - the box around the slider */

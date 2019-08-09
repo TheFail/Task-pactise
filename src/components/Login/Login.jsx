@@ -1,7 +1,14 @@
 import React, { Component } from 'react'
 import './Login.css'
 import Putton from '../Button/Button.jsx'
-import {FormErrors} from './LoginError'
+import { FormErrors } from './LoginError'
+import PassVis from '../assets/img/passVis.png'
+import PassLock from '../assets/img/PassLock.png'
+import PassUnLock from '../assets/img/PassUnLock.png'
+
+console.log(PassVis)
+console.log(PassLock)
+console.log(PassUnLock)
 
 class Login extends Component {
   constructor (props) {
@@ -12,9 +19,12 @@ class Login extends Component {
       formErrors: { email: '', password: '' },
       emailValid: false,
       passwordValid: false,
-      formValid: false
+      formValid: false,
+      type: 'password',
+      score: 'null'
     }
     this.handleUserInput = this.handleUserInput.bind(this)
+    this.showHide = this.showHide.bind(this)
   }
 
   handleUserInput (e) {
@@ -55,21 +65,34 @@ class Login extends Component {
     return (error.length === 0 ? '' : 'has-error')
   }
 
+  showHide (e) {
+    e.preventDefault()
+    e.stopPropagation()
+    this.setState({
+      type: this.state.type === 'input' ? 'password' : 'input'
+    })
+  }
+
   render () {
     return (
       <div className="Login">
-        <div className="form-signin">
-          <input value={this.state.email} onChange={this.handleUserInput} className= {`form-control up ${this.errorClass(this.state.formErrors.email)}`} type="email" id="log_email" required="required" placeholder="Email" name="email" />
-          <input value={this.state.password} onChange={this.handleUserInput} className={`form-control down ${this.errorClass(this.state.formErrors.password)}`} type="password" id="log_password" required="required" placeholder="Password" name="password" />
+        <div className="form-login">
+          <input value={this.state.email} onChange={this.handleUserInput} className= {`login-control up ${this.errorClass(this.state.formErrors.email)}`} type="email" id="log_email" required="required" placeholder="Email" name="email" />
+          <div className="password">
+            <input value={this.state.password} onChange={this.handleUserInput} className={`login-control down password__input ${this.errorClass(this.state.formErrors.password)}`} type={this.state.type} id="log_password" required="required" placeholder="Password" name="password"/>
+            <span className="password__show" onClick={this.showHide}><img src={this.state.type === 'input' ? PassUnLock : PassLock} alt={this.state.type === 'input' ? 'PassLock' : 'Show'}></img></span>
+          </div>
           <div className="panel panel-default">
             <FormErrors formErrors={this.state.formErrors} className="fORMeRR"/>
           </div>
         </div>
         <a href="" id="forgot">Forgot your password?</a>
-        <Putton type="Login_Handler" disabled={!this.state.formValid} onClick="showMessage()"></Putton >
+        <Putton type="Login_Handler" onClick="showMessage()"></Putton >
+        <script>
+        </script>
       </div>
     )
   }
-};
+}
 
 export default Login

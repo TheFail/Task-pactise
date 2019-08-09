@@ -6,16 +6,33 @@ import Form from '../Form/Form.jsx'
 console.log(Logo)
 
 class App extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      checked: true
+    }
+    this.cneck = this.cneck.bind(this)
+  }
+
+  cneck () {
+    console.log(this.state.checked)
+    if (this.state.checked === true) {
+      this.setState({ checked: false })
+    } else {
+      this.setState({ checked: true })
+    }
+  }
 
   render () {
     return (
       <div className="Appt" >
         <header className="App-header">
-          <div className="top" name="top">
+          <input checked={this.state.checked} type="checkbox" className="TopHov" name="top"/>
+          <span className="top" onClick={this.cneck} name="top">
             <div className="logo" >
-              <img src={Logo} alt="Vitim+"></img>
+              <img className="log" src={Logo} alt="Vitim+"></img>
             </div>
-          </div>
+          </span>
         </header>
         <div className="Go">
           <Form />

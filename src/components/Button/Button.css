@@ -1,16 +1,17 @@
 .button {
-    border-radius: 4px;
-    background-color: #F51240;
+    border-radius: 4pt;
+    background-color: rgb(246, 18, 63);
     border: none;
     color: #FFFFFF;
     text-align: center;
-    font-size: 20px;
-    font-family: 'Roboto-Regular', sans-serif;
-    width: 200px;
-    height: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15pt;
+    width: 100%;
+    max-width: 330px;
+    height: 40px;
     transition: all 0.5s;
     cursor: pointer;
-    margin: 5px;
+    margin: 5px 5px;
 }
 
 .button span {
@@ -38,17 +39,17 @@
     right: 0;
 }
 
-.button:hover {background-color: #F51240}
+.button:hover {background-color: rgb(246, 18, 63);}
 
 .button:active {
-  background: #F51240;
+  background: rgb(246, 18, 63);
 }
 
 .button:disabled {
      background-color: rgb(116, 29, 47); }
 
 .button:default {
-  background-color: #F51240
+  background-color: rgb(246, 18, 63);
 }
 
 .RegLink{

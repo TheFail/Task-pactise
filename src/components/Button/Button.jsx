@@ -21,8 +21,8 @@ function Button (props) {
       </div>)
   } else if (props.type === 'SECOND') {
     return (
-      <div>
-        <a href="javascript:void(null);" onClick={props.onClick}>Back to Login</a>
+      <div className="RegLink">
+        Alredy have account? <a href="javascript:void(null);" onClick={props.onClick}>Back to Login.</a>
       </div>)
   }
 };

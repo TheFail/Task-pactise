@@ -4,52 +4,83 @@
   margin-right: 0%;
 }
 
-.form-signin {
+.form-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
   max-width: 330px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.form-signin .checkbox {
+.form-login .checkbox {
   font-weight: 400;
 }
 
-.form-signin .form-control {
+.form-login .login-control {
   position: relative;
   box-sizing: border-box;
-  height: 40px;
-  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  height: 45px;
+  font-size: 13pt;
   width: 100%;
   padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: 1px solid rgb(200, 199, 204);
+  border-radius: 4pt;
 }
 
-.form-signin .form-control:focus {
+.form-login .login-control:focus {
   z-index: 2;
 }
 
-.form-signin .up {
+.form-login .up {
   margin-bottom: -1px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.form-signin .down {
+.form-login .down {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
-.form-signin .md {
+.form-login .md {
   margin-bottom: -1px;
   border-radius: 0;
 }
 
-.form-signin .marg {
+.form-login .marg {
   margin-top: 10px;
 }
 
 p{
   font-size: 15px;
   color: red;
+}
+
+.password {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+.password__input {
+  display: block;
+  font-weight: 400;
+  color: rgb(74, 91, 110);
+}
+.password__input:focus, .password__input:active {
+  outline: 0;
+}
+.password__show {
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  height: 16px;
+  right: 2px;
+  padding: 4px 8px;
+  border-radius: 4pt;
+  font-weight: 700;
+  font-size: .8em;
 }
