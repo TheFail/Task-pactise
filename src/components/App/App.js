@@ -26,14 +26,14 @@ class App extends React.Component {
   render () {
     return (
       <div className="Appt" >
-        <header className="App-header">
-          <input checked={this.state.checked} type="checkbox" className="TopHov" name="top"/>
+        <div className="App-header">
+          <input checked={this.state.checked} type="checkbox" className="TopHov"/>
           <span className="top" onClick={this.cneck} name="top">
             <div className="logo" >
               <img className="logi" src={Logo} alt="Vitim+"></img>
             </div>
           </span>
-        </header>
+        </div>
         <div className="Go">
           <Form />
           {/* {Form} */}
