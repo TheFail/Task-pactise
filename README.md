@@ -1,2 +1,2 @@
-# Task-practise
-Autorisation forin ReactJS on GLUU 
+# Vitim+ login screen
+Autorisation for Vitim+ on ReactJS
