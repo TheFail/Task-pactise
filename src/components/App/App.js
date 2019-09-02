@@ -11,15 +11,15 @@ class App extends React.Component {
     this.state = {
       checked: true
     }
-    this.cneck = this.cneck.bind(this)
+    this.check = this.check.bind(this)
   }
 
-  cneck () {
+  check () {
     console.log(this.state.checked)
     if (this.state.checked === true) {
       this.setState({ checked: false })
     } else {
-      this.setState({ checked: true })
+      this.setState({ checked: false })
     }
   }
 
@@ -28,7 +28,7 @@ class App extends React.Component {
       <div className="Appt" >
         <div className="App-header">
           <input checked={this.state.checked} type="checkbox" className="TopHov"/>
-          <span className="top" onClick={this.cneck} name="top">
+          <span className="top" onClick={this.check} name="top">
             <div className="logo" >
               <img className="logi" src={Logo} alt="Vitim+"></img>
             </div>

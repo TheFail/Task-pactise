@@ -89,4 +89,5 @@ p{
 .locking{
   height: 16px;
   width: auto;
+  z-index: 999999;
 }
