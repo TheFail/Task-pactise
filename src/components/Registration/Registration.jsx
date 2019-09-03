@@ -140,16 +140,7 @@ class RegistrationForm extends Component {
     }
     const usermaneGet = emailValue.slice(0, emailDog)
     this.setState({ username: usermaneGet || '' })
-    this.setState({ usernameValid: true || false })
-    this.setState({ formValid: this.state.emailValid &&
-                              this.state.passwordValid &&
-                              this.state.passwordConfValid &&
-                              this.state.usernameValid &&
-                              this.state.fNameValid &&
-                              this.state.lNameValid &&
-                              this.state.dateValid &&
-                              this.state.phoneValid &&
-                              this.state.SCTCUValid })
+
   }
 
   cneck () {
